@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Index</title>
+</head>
+
+<body>
+
+    <section class="nav_section">
+        <div class="nav-container">
+            <!-- Toggle Button for Mobile -->
+            <button class="nav-toggle" aria-label="Toggle Navigation"><i class="bi bi-list"></i></button>
+
+            <!-- Navigation Bar -->
+            <ul class="nav-bar">
+                <li class="nav-item "> <a href="index.html">Dashboard</a></li>
+                <li class="nav-item "> <a href="inventory_home.html">Inventory</a></li>
+                <li class="nav-item active"><a href="asset_request.html">Asset Request</a></li>
+                <li class="nav-item"><a href="assigned_asset.html">Assigned Assets</a></li>
+            </ul>
+
+            <!-- Search and Home Button -->
+            <div class="search_home">
+                <form action="/search" method="get">
+                    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                    <label class="button searchbutton" for="searchright"><span class="mglass"><i
+                                class="bi bi-search"></i></span></label>
+                    <div class="Home_nav"><a href="#"><i class="bi bi-house-door-fill"></i></a></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="add_new_assets">
+        <div class="head_btn">
+            <div class="head_arrow_tabs">
+                <div class="arrow_heading">
+                    <a href="asset_request.html"><i class="bi bi-arrow-left"></i></a>
+                    <h2>Asset Request</h2>
+                </div>
+                <div class="link_tabs">
+                    <a href="asset_request.html">Asset Request </a>
+                    <i class="bi bi-chevron-left"></i>
+                    <a href="#">12332</a>
+                </div>
+            </div>
+            <form action="submit">
+                <a href="" class="bulk_upload_btn">Edit</a>
+                <a href="" class="add_new_btn">Done</a>
+            </form>
+        </div>
+        <div class="table_sec_total">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn  btn-block text-left head_up_arrow" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="head_up_arrow">
+                                    <div class="form-header">
+                                        <h4>Sr. No.</h4>
+                                        <p>4233211</p>
+                                    </div>
+                                    <div class="link_to_up">
+                                        <a href="#" class="arrow-icon"><i
+                                                class="fas fa-chevron-down float-right"></i></a>
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+
+                        <div class="form-container-fluid">
+                            <form class="asset-form">
+                                <div class="form-row form_fields">
+                                    <div class="form-group">
+                                        <label for="Employee-ID">Employee ID</label>
+                                        <input class="form-control input_box_size input_field_ss" type="text"
+                                            id="Employee-ID" placeholder="12443">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Employee-Name">Employee Name</label>
+                                        <input class="form-control input_box_size input_field_ss" type="text"
+                                            id="Employee-Name" placeholder="Bharath. M">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Designation">Designation</label>
+                                        <input class="form-control input_box_size input_field_ss" type="text"
+                                            id="Designation" placeholder="UI / UX Designer">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Department">Department</label>
+                                        <input class="form-control input_box_size input_field_ss" type="text"
+                                            id="Department" placeholder="Information Technology">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Reporting Manager">Reporting Manager</label>
+                                        <input class="form-control input_box_size input_field_ss" type="text"
+                                            id="Reporting Manager" placeholder="Chiranjeevi Reddy Velagala">
+                                    </div>
+
+                                </div>
+                                <div class="form-row form_fields">
+                                    <div class="form-group">
+                                        <label for="Contact Number">Contact Number</label>
+                                        <input type="text" class="form-control input_box_size input_field_2ss"
+                                            id="Contact Number" placeholder="+91 - 9951094032">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Personal Mail">Personal Mail</label>
+                                        <input type="text" class="form-control input_box_size input_field_2ss"
+                                            id="Personal Mail" placeholder="bharathmaduguru@gmail.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Division">Division</label>
+                                        <input type="text" class="form-control input_box_size input_field_2ss"
+                                            id="Division" placeholder="HHC - Corporate">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Work Location">Work Location</label>
+                                        <input type="text" class="form-control input_box_size input_field_2ss"
+                                            id="Work Location" placeholder="Hetero Tower, Commerzone, Silpa G....">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="table_sec_total">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn  btn-block text-left head_up_arrow" type="button" data-toggle="collapse"
+                                data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                                <div class="head_up_arrow">
+                                    <div class="form-header">
+                                        <h4>Sr. No.</h4>
+                                        <p>4233211</p>
+                                    </div>
+                                    <div class="link_to_up">
+                                        <a href="#" class="arrow-icon"><i
+                                                class="fas fa-chevron-down float-right"></i></a>
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapsetwo" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+
+                        <div class="form-container-fluid">
+                            <form class="asset-form">
+                                <div class="form-row form_fields">
+                                    <div class="form-group">
+                                        <label for="asset-type" class="label_name">Brand</label>
+                                        <select id="asset-type" class="form-control input_box_sizes">
+                                            <option value="HP">HP</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="asset-type" class="label_name">Processor</label>
+                                        <select id="asset-type" class="form-control input_box_sizes">
+                                            <option value="i5">i5</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="asset-type" class="label_name">Memory/RAM</label>
+                                        <select id="asset-type" class="form-control input_box_sizes">
+                                            <option value="8GB">16GB</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="asset-type" class="label_name">Storage/hard disk</label>
+                                        <select id="asset-type" class="form-control input_box_sizes">
+                                            <option value="128GB">512GB</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="asset-type" class="label_name">Graphics card</label>
+                                        <select id="asset-type" class="form-control input_box_sizes">
+                                            <option value="128GB">512GB</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="asset-type" class="label_name">Charger</label>
+                                        <select id="asset-type" class="form-control input_box_sizes">
+                                            <option value="Yes">Yes</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Product ID">Product ID</label>
+                                        <select id="charger" class="form-control input_box_size">
+                                            <option value="ede2345">ede2345</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+    <!-- script for the upload filr in form -->
+
+    <script>
+        const uploadBtn = document.getElementById('upload-btn');
+        const inputFile = document.getElementById('invoice-doc');
+        const uploadText = document.getElementById('upload-text');
+
+        uploadBtn.addEventListener('click', () => {
+            inputFile.click(); // Trigger file input click on button click
+        });
+
+        inputFile.addEventListener('change', () => {
+            if (inputFile.files.length > 0) {
+                const fileName = inputFile.files[0].name;
+                uploadText.textContent = fileName; // Replace "Upload" text with the file name
+            }
+        });
+    </script>
+
+    <!-- end -->
+
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navBar = document.querySelector('.nav-bar');
+
+        navToggle.addEventListener('click', () => {
+            navBar.classList.toggle('show');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

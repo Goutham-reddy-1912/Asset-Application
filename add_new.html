@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Index</title>
+</head>
+
+<body>
+
+    <section class="nav_section">
+        <div class="nav-container">
+            <!-- Toggle Button for Mobile -->
+            <button class="nav-toggle" aria-label="Toggle Navigation"><i class="bi bi-list"></i></button>
+
+            <!-- Navigation Bar -->
+            <ul class="nav-bar">
+                <li class="nav-item "> <a href="index.html">Dashboard</a></li>
+                <li class="nav-item active"> <a href="inventory_home.html">Inventory</a></li>
+                <li class="nav-item"><a href="asset_request.html">Asset Request</a></li>
+                <li class="nav-item"><a href="assigned_asset.html">Assigned Assets</a></li>
+            </ul>
+
+            <!-- Search and Home Button -->
+            <div class="search_home">
+                <form action="/search" method="get">
+                    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                    <label class="button searchbutton" for="searchright"><span class="mglass"><i
+                                class="bi bi-search"></i></span></label>
+                    <div class="Home_nav"><a href="#"><i class="bi bi-house-door-fill"></i></a></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="add_new_assets">
+        <div class="head_btn">
+            <div class="head_arrow_tabs">
+                <div class="arrow_heading">
+                    <a href="inventory_home.html"><i class="bi bi-arrow-left"></i></a>
+                    <h2>Inventory</h2>
+                </div>
+                <div class="link_tabs">
+                    <a href="inventory_home.html">Inventory</a>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <a href="#">Add New</a>
+                </div>
+            </div>
+            <form action="submit">
+                <a href="" class="bulk_upload_btn">Add Another Asset</a>
+                <a href="inventory_inner_2.html" class="add_new_btn">Save</a>
+            </form>
+        </div>
+        <div class="table_sec_total">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn  btn-block text-left head_up_arrow" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="head_up_arrow">
+                                    <div class="form-header">
+                                        <h4>Sr. No.</h4>
+                                        <p>4233211</p>
+                                    </div>
+                                    <div class="link_to_up">
+                                        <a href="#" class="arrow-icon"><i
+                                                class="fas fa-chevron-down float-right"></i></a>
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="form-container-fluid">
+                            <form class="asset-form">
+                                <div class="form-row form_fields">
+                                    <div class="form-group">
+                                        <label for="asset-type" class="label_name">Select Asset Type</label>
+                                        <select id="asset-type" class="form-control input_box_sizes">
+                                            <option value="laptop">Laptop</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location" class="label_name">Location</label>
+                                        <select id="location" class=" form-control input_box_sizes">
+                                            <option value="select">Select</option>
+                                            <!-- Add more options here -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="po-number" class="label_name">PO Number</label>
+                                        <input class=" form-control input_box_size " type="text" id="po-number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="po-date" class="label_name">PO Date</label>
+                                        <input class="form-control input_box_size" type="date" id="po-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="invoice-number" class="label_name">Invoice Number</label>
+                                        <input class="form-control input_box_size" type="text" id="invoice-number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="invoice-number" class="label_name">Invoice Number</label>
+                                        <input class="form-control input_box_size" type="text" id="invoice-number">
+                                    </div>
+                                    <div class="form-group upload-section">
+                                        <label for="invoice-doc" class="label_name">Invoice Document</label>
+                                        <div class="upload-btn-wrapper">
+                                            <button id="upload-btn" class="upload-btn input_box_size" type="button">
+                                                <span id="upload-text" class="upload-text">Upload</span>
+                                                <span class="upload-icon"><i class="bi bi-upload"></i></span>
+                                                <!-- Up arrow icon -->
+                                            </button>
+                                            <input type="file" id="invoice-doc" name="invoice-doc"
+                                                style="display: none;" />
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="form-row form_fields">
+                                    <div class="form-group">
+                                        <label for="product-id" class="label_name">Product ID</label>
+                                        <input type="text" class="form-control input_box_size" id="product-id">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="brand" class="label_name">Brand</label>
+                                        <input type="text" class="form-control input_box_size" id="brand">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="processor" class="label_name">Processor</label>
+                                        <input type="text" class="form-control input_box_size" id="processor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ram" class="label_name">Memory/RAM</label>
+                                        <input type="number" class="form-control input_box_size" id="ram">
+                                        <span class="gb_data">GB</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="storage" class="label_name">Storage/Hard Disk</label>
+                                        <input type="number" class="form-control input_box_size" id="storage">
+                                        <span class="gb_data">GB</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Graphics-card" class="label_name">Graphics Card</label>
+                                        <input type="number" class="form-control input_box_size" id="graphics-card">
+                                        <span class="gb_data">GB</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="charger" class="label_name">Charger</label>
+                                        <select id="charger" class="form-control input_box_sizes">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row form_fields">
+
+                                    <div class="form-group">
+                                        <label for="amount" class="label_name">Amount</label>
+                                        <input type="text" class="form-control input_box_size" id="amount">
+                                    </div>
+
+                                    <div class="form-group text_area">
+                                        <label for="description" class="label_name">Product Description</label>
+                                        <textarea id="description" rows="2" class="form-control input_box_size "
+                                            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></textarea>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+
+    <!-- script for the upload filr in form -->
+
+    <script>
+        // jQuery to toggle arrow icon direction
+        $('.collapse').on('show.bs.collapse', function () {
+            $(this).prev('.card-header').find('.fas').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        }).on('hide.bs.collapse', function () {
+            $(this).prev('.card-header').find('.fas').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        });
+
+        const uploadBtn = document.getElementById('upload-btn');
+        const inputFile = document.getElementById('invoice-doc');
+        const uploadText = document.getElementById('upload-text');
+
+        uploadBtn.addEventListener('click', () => {
+            inputFile.click(); // Trigger file input click on button click
+        });
+
+        inputFile.addEventListener('change', () => {
+            if (inputFile.files.length > 0) {
+                const fileName = inputFile.files[0].name;
+                uploadText.textContent = fileName; // Replace "Upload" text with the file name
+            }
+        });
+    </script>
+
+    <!-- end -->
+
+    <script>
+        const arrowIcon = document.querySelector('.arrow-icon');
+        const formSection = document.querySelector('.form-section');
+
+        arrowIcon.addEventListener('click', () => {
+            formSection.classList.toggle('open');
+        });
+    </script>
+
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navBar = document.querySelector('.nav-bar');
+
+        navToggle.addEventListener('click', () => {
+            navBar.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>

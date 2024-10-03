@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Index</title>
+</head>
+
+<body>
+
+    <section class="nav_section">
+        <div class="nav-container">
+            <!-- Toggle Button for Mobile -->
+            <button class="nav-toggle" aria-label="Toggle Navigation"><i class="bi bi-list"></i></button>
+
+            <!-- Navigation Bar -->
+            <ul class="nav-bar">
+                <li class="nav-item "> <a href="index.html">Dashboard</a></li>
+                <li class="nav-item active"> <a href="inventory_home.html">Inventory</a></li>
+                <li class="nav-item"><a href="asset_request.html">Asset Request</a></li>
+                <li class="nav-item"><a href="assigned_asset.html">Assigned Assets</a></li>
+            </ul>
+
+            <!-- Search and Home Button -->
+            <div class="search_home">
+                <form action="/search" method="get">
+                    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                    <label class="button searchbutton" for="searchright"><span class="mglass"><i
+                                class="bi bi-search"></i></span></label>
+                    <div class="Home_nav"><a href="#"><i class="bi bi-house-door-fill"></i></a></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="add_new_assets">
+        <div class="head_btn">
+            <div class="head_arrow_tabs">
+                <div class="arrow_heading">
+                    <a href="inventory_home.html"><i class="bi bi-arrow-left"></i></a>
+                    <h2>Inventory</h2>
+                </div>
+                <div class="link_tabs">
+                    <a href="inventory_home.html">Inventory</a>
+                    <i class="bi bi-chevron-left"></i>
+                    <a href="#">Bulk Upload</a>
+                </div>
+            </div>
+            <form action="submit">
+                <a href="preview_bluk.html" class="bulk_upload_btn">Preview</a>
+                <a href="#" class="add_new_btn">Save</a>
+            </form>
+        </div>
+        <div class="table_sec_total">
+            <div class="head_up_arrow">
+                <div class="form-header">
+                    <h4>Sr. No.</h4>
+                    <p>4233211</p>
+                </div>
+                <div class="link_to_up">
+                    <a href="#" class="arrow-icon"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="form-container-fluid">
+                <form class="asset-form">
+                    <div class="form-row form_fields">
+                        <div class="form-group">
+                            <label for="asset-type">Select Asset Type</label>
+                            <select id="asset-type" class="input_box_size">
+                                <option value="laptop">Laptop</option>
+                                <!-- Add more options here -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <select id="location" class="input_box_size">
+                                <option value="select">Select</option>
+                                <!-- Add more options here -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="po-number">PO Number</label>
+                            <input class="input_box_size" type="text" id="po-number" value="34345r55">
+                        </div>
+                        <div class="form-group">
+                            <label for="po-date">PO Date</label>
+                            <input class="input_box_size" type="date" id="po-date" value="2024-08-20">
+                        </div>
+                        <div class="form-group">
+                            <label for="invoice-number">Invoice Number</label>
+                            <input class="input_box_size" type="text" id="invoice-number" value="1234456">
+                        </div>
+                        <div class="form-group">
+                            <label for="invoice-number">Invoice Number</label>
+                            <input class="input_box_size" type="text" id="invoice-number" value="1234456">
+                        </div>
+                        <div class="form-group upload-section">
+                            <label for="invoice-doc" class="label_name">Invoice Document</label>
+                            <div class="upload-btn-wrapper">
+                                <button id="upload-btn" class="upload-btn input_box_size" type="button">
+                                    <span id="upload-text" class="upload-text">Upload</span>
+                                    <span class="upload-icon"><i class="bi bi-upload"></i></span> <!-- Up arrow icon -->
+                                </button>
+                                <input type="file" id="invoice-doc" name="invoice-doc" style="display: none;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form_fields">
+                        <label class="upload-container" for="file-upload">
+                            <i class="bi bi-upload"></i>
+                            <p>Select or Drop File</p>
+                            <span>Upload CSV Files only.</span>
+                            <input type="file" id="file-upload" accept=".csv" style="display: none;" />
+                            <span id="file-name"></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+
+
+    <!-- script for the upload filr in form -->
+
+    <script>
+        const uploadBtn = document.getElementById('upload-btn');
+        const inputFile = document.getElementById('invoice-doc');
+        const uploadText = document.getElementById('upload-text');
+    
+        uploadBtn.addEventListener('click', () => {
+            inputFile.click(); // Trigger file input click on button click
+        });
+    
+        inputFile.addEventListener('change', () => {
+            if (inputFile.files.length > 0) {
+                const fileName = inputFile.files[0].name;
+                uploadText.textContent = fileName; // Replace "Upload" text with the file name
+            }
+        });
+    </script>
+
+    <!-- end -->
+
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navBar = document.querySelector('.nav-bar');
+
+        navToggle.addEventListener('click', () => {
+            navBar.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
